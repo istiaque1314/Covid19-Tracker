@@ -6,7 +6,6 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 import android.widget.ScrollView;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,6 +27,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView tvCases,tvRecovered,tvCritical,tvActive,tvTodayCases,tvTotalDeaths,tvTodayDeaths,tvAffectedCountries,tvTests,tvPopulation;
     SimpleArcLoader simpleArcLoader;
+
     ScrollView scrollView;
     PieChart pieChart;
 
@@ -35,9 +35,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-<<<<<<< HEAD
         //Hello world i am shubhankar
-=======
 
         tvCases = findViewById(R.id.tvCases);
         tvRecovered = findViewById(R.id.tvRecovered);
@@ -56,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         fetchData();
->>>>>>> origin
+
 
     }
 
