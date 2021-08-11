@@ -117,15 +117,17 @@ public class MainActivity extends AppCompatActivity {
 
     public void moreInfo(View view) {
 
-<<<<<<< HEAD
+
 //        Intent intent = new Intent(MainActivity.this,HomeActivity.class);
 //        startActivity(intent);
         //Hello istiaque
         //Shubhanker shubham
         // hii hello world
-=======
+        //shakky world
+
+
         Intent intent = new Intent(MainActivity.this,MenuActivity.class);
         startActivity(intent);
->>>>>>> origin/master
+
 
 }}
