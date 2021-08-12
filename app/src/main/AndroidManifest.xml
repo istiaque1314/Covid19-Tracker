@@ -15,14 +15,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Tracker">
-        <activity android:name=".MenuActivity"></activity>
-        <!-- <uses-library -->
-        <!-- android:name="com.google.android.wearable" -->
-        <!-- android:required="true" /> -->
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
+        <activity android:name=".HelpActivity"></activity>
+        <activity android:name=".AwareActivity" />
+        <activity android:name=".MenuActivity" />
+
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
