@@ -117,8 +117,6 @@ public class MainActivity extends AppCompatActivity {
 
     public void moreInfo(View view) {
 
-
-
         Intent intent = new Intent(MainActivity.this,MenuActivity.class);
         startActivity(intent);
 
