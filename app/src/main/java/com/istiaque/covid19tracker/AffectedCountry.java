@@ -50,7 +50,9 @@ public class AffectedCountry extends AppCompatActivity {
         String countryName = intentWorld.getStringExtra("country");
         Country_Name.setText(countryName);
 
-        String url = "https://corona.lmao.ninja/v2/countries";
+        String url = "https://disease.sh/v3/covid-19/countries/" + countryName;
+//        "?strict=true"
+
 
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
             @Override
@@ -60,25 +62,19 @@ public class AffectedCountry extends AppCompatActivity {
 
                 try {
 
-                    JSONArray jsonArray = new JSONArray(response);
+                    JSONObject jsonObject = new JSONObject(response);
 
-                    for(int i = 0; i < jsonArray.length(); i++)
-                    {
-
-                        JSONObject jsonObject = jsonArray.getJSONObject(i);
-                        tvCases.setText(jsonObject.getString("cases"));
-                        tvTodayCases.setText(jsonObject.getString("todayCases"));
-                        tvDeaths.setText(jsonObject.getString("deaths"));
-                        tvTodayDeaths.setText(jsonObject.getString("todayDeaths"));
-                        tvRecovered.setText(jsonObject.getString("recovered"));
-                        tvActive.setText(jsonObject.getString("active"));
-                        tvCritical.setText(jsonObject.getString("critical"));
-                        tvTests.setText(jsonObject.getString("tests"));
-                        tvPopulation.setText(jsonObject.getString("population"));
-                        tvContinent.setText(jsonObject.getString("continent"));
-                        tvUndefined.setText(jsonObject.getString("undefined"));
-
-                    }
+                    tvCases.setText(jsonObject.getString("cases"));
+                    tvTodayCases.setText(jsonObject.getString("todayCases"));
+                    tvDeaths.setText(jsonObject.getString("deaths"));
+                    tvTodayDeaths.setText(jsonObject.getString("todayDeaths"));
+                    tvRecovered.setText(jsonObject.getString("recovered"));
+                    tvActive.setText(jsonObject.getString("active"));
+                    tvCritical.setText(jsonObject.getString("critical"));
+                    tvTests.setText(jsonObject.getString("tests"));
+                    tvPopulation.setText(jsonObject.getString("population"));
+                    tvContinent.setText(jsonObject.getString("continent"));
+                    tvUndefined.setText(jsonObject.getString("undefined"));
 
 
                 } catch (JSONException e) {
