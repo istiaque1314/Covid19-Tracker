@@ -45,11 +45,11 @@ public class MenuActivity extends AppCompatActivity {
 
                 switch (item.getItemId()){
 
-                    case R.id.home_menu:
-
-                        Intent intent13 = new Intent(MenuActivity.this, MenuActivity.class);
-                        startActivity(intent13);
-                        break;
+//                    case R.id.home_menu:
+//
+//                        Intent intent13 = new Intent(MenuActivity.this, MenuActivity.class);
+//                        startActivity(intent13);
+//                        break;
 
                     case R.id.world_menu:
 
