@@ -8,6 +8,8 @@
 
     <uses-permission android:name="android.permission.INTERNET" />
 
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
@@ -15,17 +17,45 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Tracker">
-        <activity android:name=".MenuActivity"></activity>
-        <!-- <uses-library -->
-        <!-- android:name="com.google.android.wearable" -->
-        <!-- android:required="true" /> -->
-        <!--
-               Set to true if your app is Standalone, that is, it does not require the handheld
-               app to run.
-        -->
+        <activity android:name=".AffectedCountry" />
+        <activity android:name=".BedsAndHospitalActivity" />
+        <activity android:name=".HelpActivity" />
+        <activity android:name=".AwareActivity" />
+        <activity android:name=".MenuActivity" />
+        <activity android:name=".HomeActivity" />
+
+
+        <activity
+            android:name=".BedsActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.istiaque.covid19tracker.BedsActivity" />
+        </activity>
+        <activity
+            android:name=".StateActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
+<!--        <activity android:name=".AwareActivity" />-->
+        <activity android:name=".IndiaActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.istiaque.covid19tracker.IndiaActivity" />
+        </activity>
+
         <meta-data
             android:name="com.google.android.wearable.standalone"
             android:value="true" />
+
+        <activity
+            android:name=".WorldActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.istiaque.covid19tracker.WorldActivity" />
+        </activity>
+
 
         <activity android:name=".MainActivity">
             <intent-filter>
