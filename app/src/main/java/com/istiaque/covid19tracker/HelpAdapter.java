@@ -54,17 +54,9 @@ public class HelpAdapter extends RecyclerView.Adapter<HelpAdapter.ViewHolder>imp
             public void onClick(View v) {
                 Toast.makeText(context, temp1.getStateName(), Toast.LENGTH_SHORT).show();
                 Intent intent = new Intent(Intent.ACTION_DIAL);
-                intent.setData(Uri.parse("tel:" + temp1.getContactNumber().toString()));
-                //intent.setFlags(intent.FLAG_ACTIVITY_NEW_TASK);
+                intent.setData(Uri.parse("tel:" + temp1.getContactNumber()));
+                intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intent);
-
-
-//                Intent intentWorld = new Intent(context,AffectedCountry.class);
-//
-//                intentWorld.putExtra("country",temp2.getCountry_Name());
-//
-//                intentWorld.setFlags(intentWorld.FLAG_ACTIVITY_NEW_TASK);
-//                context.startActivity(intentWorld);
 
             }
         });
