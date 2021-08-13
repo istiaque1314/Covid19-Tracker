@@ -47,7 +47,7 @@ public class MenuActivity extends AppCompatActivity {
 
                     case R.id.home_menu:
 
-                        Intent intent13 = new Intent(MenuActivity.this, HomeActivity.class);
+                        Intent intent13 = new Intent(MenuActivity.this, MenuActivity.class);
                         startActivity(intent13);
                         break;
 
@@ -69,6 +69,7 @@ public class MenuActivity extends AppCompatActivity {
                         startActivity(intent5);
                         break;
                 }
+
 
                 return true;
             }
