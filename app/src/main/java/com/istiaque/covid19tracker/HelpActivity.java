@@ -10,6 +10,7 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -41,7 +42,6 @@ public class HelpActivity extends AppCompatActivity {
 
         recView = findViewById(R.id.recView);
         arrayList = new ArrayList<>();
-
 
         StringRequest stringRequest = new StringRequest(Request.Method.GET, url, response -> {
             Log.d(TAG, "onResponse: "+ response);
