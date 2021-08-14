@@ -65,10 +65,10 @@ public class BedsAndHospitalActivity extends AppCompatActivity {
                     {
                         JSONObject data = jsonArray.getJSONObject(i);
 
-                        String country = data.getString("state");
-                        Log.e("DATA", "onResponse: " + country);
+                        String state = data.getString("state");//Getting Only state Name
+                        Log.e("DATA", "onResponse: " + state);
 
-                        if(country.equals(stateName)){
+                        if(state.equals(stateName)){
                             tvRuralHosp.setText(data.getString("ruralHospitals"));
                             tvRuralBeds.setText(data.getString("ruralBeds"));
                             tvUrbanHosp.setText(data.getString("urbanHospitals"));
