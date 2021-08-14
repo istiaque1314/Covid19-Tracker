@@ -59,18 +59,26 @@ public class BedsAndHospitalActivity extends AppCompatActivity {
                     JSONObject jsonObject = new JSONObject(response);
                     JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("regional");
 
+                    Log.e("JSON", "onResponse: "+ jsonArray );
+
                     for(int i  = 0; i < jsonArray.length(); i++)
                     {
 
 
                         JSONObject data = jsonArray.getJSONObject(i);
 
-                        tvRuralHosp.setText(data.getString("ruralHospitals"));
-                        tvRuralBeds.setText(data.getString("ruralBeds"));
-                        tvUrbanHosp.setText(data.getString("urbanHospitals"));
-                        tvUrbanBeds.setText(data.getString("urbanBeds"));
-                        tvTotalHosp.setText(data.getString("totalHospitals"));
-                        tvTotalBeds.setText(data.getString("totalBeds"));
+                        String state = data.getString("state");//Getting Only state Name
+                        Log.e("DATA", "onResponse: " + state);
+
+                        if(state.equals(stateName)){
+                            tvRuralHosp.setText(data.getString("ruralHospitals"));
+                            tvRuralBeds.setText(data.getString("ruralBeds"));
+                            tvUrbanHosp.setText(data.getString("urbanHospitals"));
+                            tvUrbanBeds.setText(data.getString("urbanBeds"));
+                            tvTotalHosp.setText(data.getString("totalHospitals"));
+                            tvTotalBeds.setText(data.getString("totalBeds"));
+
+                        }
 
                     }
 
