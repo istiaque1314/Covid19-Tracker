@@ -45,8 +45,6 @@ public class BedsAndHospitalActivity extends AppCompatActivity {
         String stateName = i.getStringExtra("state");
         State_Name.setText(stateName);
 
-
-
         String url = "https://api.rootnet.in/covid19-in/hospitals/beds";
 
         StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {

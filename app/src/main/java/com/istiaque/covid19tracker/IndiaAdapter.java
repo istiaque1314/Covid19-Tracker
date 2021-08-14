@@ -44,12 +44,12 @@ public class IndiaAdapter extends RecyclerView.Adapter<IndiaAdapter.ViewHolder>i
         holder.stateNAME.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intentBeds = new Intent(context,BedsAndHospitalActivity.class);
+                Intent intentState = new Intent(context,StateActivity.class);
 
-                intentBeds.putExtra("state",temp2.getStateName());
+                intentState.putExtra("state",temp2.getStateName());
 
-                intentBeds.setFlags(intentBeds.FLAG_ACTIVITY_NEW_TASK);
-                context.startActivity(intentBeds);
+                intentState.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                context.startActivity(intentState);
             }
         });
     }
