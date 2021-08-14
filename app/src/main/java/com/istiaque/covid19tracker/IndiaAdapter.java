@@ -48,7 +48,7 @@ public class IndiaAdapter extends RecyclerView.Adapter<IndiaAdapter.ViewHolder>i
 
                 intentBeds.putExtra("state",temp2.getStateName());
 
-                intentBeds.setFlags(intentBeds.FLAG_ACTIVITY_NEW_TASK);
+                intentBeds.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intentBeds);
             }
         });
