@@ -61,6 +61,8 @@ public class BedsAndHospitalActivity extends AppCompatActivity {
 
                     for(int i  = 0; i < jsonArray.length(); i++)
                     {
+
+
                         JSONObject data = jsonArray.getJSONObject(i);
 
                         tvRuralHosp.setText(data.getString("ruralHospitals"));
