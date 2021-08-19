@@ -9,6 +9,7 @@
     android:layout_marginLeft="5dp"
     app:cardBackgroundColor="#65151414"
     app:cardUseCompatPadding="false"
+
     >
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -20,8 +21,6 @@
             android:id="@+id/Image"
             android:layout_width="65dp"
             android:layout_height="65dp"
-
-
             android:layout_marginStart="16dp"
             android:src="@drawable/helpcall"
             app:layout_constraintBottom_toBottomOf="parent"
