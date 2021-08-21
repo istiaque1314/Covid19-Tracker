@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    app:cardCornerRadius="6dp"
+    android:elevation="4dp"
+    android:background="#00000000"
+    android:layout_marginTop="5dp"
+    android:layout_marginStart="5dp"
+    android:layout_marginLeft="5dp"
+
+    android:layout_marginBottom="5dp"
+    app:cardUseCompatPadding="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#000000"
+        android:padding="4dp">
+
+        <ImageView
+            android:id="@+id/img1"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginRight="15dp"
+            android:src="@drawable/helpcall"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="State Name"
+            android:layout_toRightOf="@id/img1"
+            android:textSize="24dp"
+            android:textStyle="bold"
+            android:textColor="#AAAAAA"
+            android:id="@+id/State_Name"
+            android:layout_marginTop="10dp"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Contact Number"
+            android:textColor="#AAAAAA"
+            android:layout_toRightOf="@id/img1"
+            android:layout_below="@id/State_Name"
+            android:textSize="18dp"
+            android:id="@+id/Contact_Number"
+            />
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>
