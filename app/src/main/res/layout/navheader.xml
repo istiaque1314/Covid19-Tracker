@@ -8,7 +8,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:src="@drawable/coronalogo2"
-        android:background="#262E68"/>
+        android:background="#C8000000"/>
 
 
 </RelativeLayout>

@@ -17,10 +17,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Covid19Tracker">
-        <activity android:name=".AffectedCountry" />
-        <activity android:name=".BedsAndHospitalActivity" />
-        <activity android:name=".HelpActivity" />
-        <activity android:name=".AwareActivity" />
+
         <activity android:name=".MenuActivity" />
         <activity android:name=".HomeActivity" />
 
@@ -32,10 +29,32 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.istiaque.covid19tracker.BedsActivity" />
         </activity>
+
+        <activity
+            android:name=".HelpActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.istiaque.covid19tracker.HelpActivity" />
+        </activity>
+
+        <activity
+            android:name=".AwareActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.istiaque.covid19tracker.AwareActivity" />
+        </activity>
+
         <activity
             android:name=".StateActivity"
-            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" />
-<!--        <activity android:name=".AwareActivity" />-->
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar" >
+
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value="com.istiaque.covid19tracker.StateActivity" />
+    </activity>
+
         <activity android:name=".IndiaActivity"
             android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
             <meta-data
@@ -55,6 +74,28 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.istiaque.covid19tracker.WorldActivity" />
         </activity>
+
+
+        <activity
+            android:name=".AffectedCountry"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.istiaque.covid19tracker.AffectedCountry" />
+        </activity>
+
+
+
+        <activity
+            android:name=".BedsAndHospitalActivity"
+            android:theme="@style/Theme.AppCompat.Light.DarkActionBar">
+
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.istiaque.covid19tracker.BedsAndHospitalActivity" />
+        </activity>
+
 
 
         <activity android:name=".MainActivity">
