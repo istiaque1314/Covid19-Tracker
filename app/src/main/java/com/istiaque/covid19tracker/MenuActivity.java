@@ -148,11 +148,20 @@ public class MenuActivity extends AppCompatActivity {
                         Intent intent2 = new Intent(MenuActivity.this,AwareActivity.class);
                         startActivity(intent2);
                         break;
+
+
+                    case R.id.symptoms:
+
+                        Intent intentsym = new Intent(MenuActivity.this,SymptomsActivity.class);
+                        startActivity(intentsym);
+                        break;
+
+
                     case R.id.about:
-//
-//                        Intent intent5 = new Intent(MainActivity.this,BedsActivity.class);
-//                        startActivity(intent5);
-//                        break;
+
+                        Intent intent5 = new Intent(MenuActivity.this,AboutActivity.class);
+                       startActivity(intent5);
+                        break;
                 }
 
 

@@ -7,8 +7,10 @@
     <item android:id="@+id/awareness"
         android:title="COVID19-Aware" />
 
+    <item android:id="@+id/symptoms"
+        android:title="Symptoms"/>
+
     <item android:id="@+id/about"
         android:title="About"/>
-
 
 </menu>
