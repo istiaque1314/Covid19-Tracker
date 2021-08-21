@@ -47,9 +47,10 @@ public class IndiaAdapter extends RecyclerView.Adapter<IndiaAdapter.ViewHolder>i
                 Intent intentState = new Intent(context,StateActivity.class);
 
                 intentState.putExtra("state",temp2.getStateName());
-
                 intentState.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 context.startActivity(intentState);
+//                intentState.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+//                context.startActivity(intentState);
             }
         });
     }
