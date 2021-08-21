@@ -165,6 +165,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="550sp"
                     android:id="@+id/details"
+                    app1:cardBackgroundColor="#000000"
                     android:layout_marginLeft="40dp"
                     android:layout_marginBottom="20sp"
                     android:layout_marginTop="20dp"
@@ -178,21 +179,27 @@
 
                     <RelativeLayout
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
+                        android:layout_height="match_parent"
                         android:background="#000000">
 
+
                         <com.leo.simplearcloader.SimpleArcLoader
+
                             android:id="@+id/loader"
-                            android:layout_width="60dp"
-                            android:layout_height="60dp"
+                            android:layout_width="100sp"
+                            android:layout_height="100sp"
+
                             android:layout_centerInParent="true"
                             android:visibility="visible"
-                            app1:arc_style="simple_arc"/>
+                            app1:arc_style="simple_arc" />
+
+
 
                         <ScrollView
                             android:id="@+id/scrollStats"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
+                            android:background="#000000"
                             android:visibility="gone">
 
                             <LinearLayout
