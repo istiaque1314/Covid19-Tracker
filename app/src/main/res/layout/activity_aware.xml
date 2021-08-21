@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="#292929"
     tools:context=".AwareActivity">
 
     <LinearLayout
@@ -27,7 +28,7 @@
             android:layout_height="wrap_content"
             android:text="Maintain Social Distancing"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/color_white"
             android:textSize="25dp"/>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -43,7 +44,7 @@
             android:layout_height="wrap_content"
             android:text="Wear Mask"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/color_white"
             android:textSize="25dp"/>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -60,7 +61,7 @@
             android:layout_height="wrap_content"
             android:text="Sanitize your hands"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/color_white"
             android:textSize="25dp"/>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -76,7 +77,7 @@
             android:layout_height="wrap_content"
             android:text="Do not shake hands"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/color_white"
             android:textSize="25dp"/>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -92,7 +93,7 @@
             android:layout_height="wrap_content"
             android:text="Stay at Home"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/color_white"
             android:textSize="25dp"/>
 
         <com.airbnb.lottie.LottieAnimationView
@@ -109,7 +110,7 @@
             android:layout_height="wrap_content"
             android:text="vaccination"
             android:textStyle="bold"
-            android:textColor="@color/black"
+            android:textColor="@color/color_white"
             android:textSize="25dp" />
 
     </LinearLayout>
