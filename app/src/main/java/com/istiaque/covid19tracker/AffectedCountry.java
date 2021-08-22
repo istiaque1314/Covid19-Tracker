@@ -23,7 +23,7 @@ import org.json.JSONObject;
 public class AffectedCountry extends AppCompatActivity {
 
     TextView Country_Name;
-    TextView tvCases,tvTodayCases,tvDeaths,tvTodayDeaths,tvRecovered,tvActive,tvCritical,tvTests,tvPopulation,tvContinent,tvUndefined;
+    TextView tvCases,tvTodayCases,tvDeaths,tvTodayDeaths,tvRecovered,tvActive,tvCritical,tvTests,tvPopulation,tvContinent;
 
 
     @Override
@@ -43,7 +43,7 @@ public class AffectedCountry extends AppCompatActivity {
         tvTests = findViewById(R.id.tvTests);
         tvPopulation = findViewById(R.id.tvPopulation);
         tvContinent = findViewById(R.id.tvContinent);
-        tvUndefined = findViewById(R.id.tvUndefined);
+
 
         Intent intentWorld = getIntent();
 
@@ -74,7 +74,7 @@ public class AffectedCountry extends AppCompatActivity {
                     tvTests.setText(jsonObject.getString("tests"));
                     tvPopulation.setText(jsonObject.getString("population"));
                     tvContinent.setText(jsonObject.getString("continent"));
-                    tvUndefined.setText(jsonObject.getString("undefined"));
+
 
 
                 } catch (JSONException e) {

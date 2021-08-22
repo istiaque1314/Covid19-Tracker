@@ -27,81 +27,81 @@ import java.util.ArrayList;
 
 public class BedsActivity extends AppCompatActivity {
 
-    String url = "https://api.rootnet.in/covid19-in/hospitals/beds";
-    RecyclerView recState;
-    ArrayList<BedsModel>arrayListBeds;
-    private BedsAdapter bedsAdapter;
-    Context context;
+  String url = "https://api.rootnet.in/covid19-in/hospitals/beds";
+  RecyclerView recState;
+  ArrayList<BedsModel>arrayListBeds;
+  private BedsAdapter bedsAdapter;
+  Context context;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_beds);
+  @Override
+  protected void onCreate(Bundle savedInstanceState) {
+    super.onCreate(savedInstanceState);
+    setContentView(R.layout.activity_beds);
 
-        recState = findViewById(R.id.recBeds);
-        arrayListBeds = new ArrayList<>();
+    recState = findViewById(R.id.recBeds);
+    arrayListBeds = new ArrayList<>();
 
-        StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
+    StringRequest request = new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
+      @Override
+      public void onResponse(String response) {
 
-                Log.d("CODE",response);
-                try {
+        Log.d("CODE",response);
+        try {
 
-                    JSONObject jsonObject = new JSONObject(response);
-                    JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("regional");
+          JSONObject jsonObject = new JSONObject(response);
+          JSONArray jsonArray = jsonObject.getJSONObject("data").getJSONArray("regional");
 
-                    for(int i  = 0; i < jsonArray.length(); i++)
-                    {
-                        JSONObject data = jsonArray.getJSONObject(i);
+          for(int i  = 0; i < jsonArray.length(); i++)
+          {
+            JSONObject data = jsonArray.getJSONObject(i);
 
-                        arrayListBeds.add(new BedsModel(data.getString("state")));
-                    }
-                    recState.setLayoutManager(new LinearLayoutManager(context));
-                    bedsAdapter = new BedsAdapter(arrayListBeds,getApplicationContext());
-                    recState.setAdapter(bedsAdapter);
+            arrayListBeds.add(new BedsModel(data.getString("state")));
+          }
+          recState.setLayoutManager(new LinearLayoutManager(context));
+          bedsAdapter = new BedsAdapter(arrayListBeds,getApplicationContext());
+          recState.setAdapter(bedsAdapter);
 
 
 
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
+        } catch (JSONException e) {
+          e.printStackTrace();
+        }
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
+      }
+    }, new Response.ErrorListener() {
+      @Override
+      public void onErrorResponse(VolleyError error) {
 
-            }
-        });
+      }
+    });
 
-        RequestQueue requestQueue = Volley.newRequestQueue(this);
-        Volley.newRequestQueue(getApplicationContext()).add(request);
-    }
+    RequestQueue requestQueue = Volley.newRequestQueue(this);
+    Volley.newRequestQueue(getApplicationContext()).add(request);
+  }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu)
-    {
-        getMenuInflater().inflate(R.menu.search,menu);
-        MenuItem item = menu.findItem(R.id.search_menu);
+  @Override
+  public boolean onCreateOptionsMenu(Menu menu)
+  {
+    getMenuInflater().inflate(R.menu.search,menu);
+    MenuItem item = menu.findItem(R.id.search_menu);
 
-        SearchView searchView = (SearchView)item.getActionView();
+    SearchView searchView = (SearchView)item.getActionView();
 
-        searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
-            @Override
-            public boolean onQueryTextSubmit(String query) {
-                return false;
-            }
+    searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
+      @Override
+      public boolean onQueryTextSubmit(String query) {
+        return false;
+      }
 
-            @Override
-            public boolean onQueryTextChange(String newText)
-            {
-                bedsAdapter.getFilter().filter(newText);
+      @Override
+      public boolean onQueryTextChange(String newText)
+      {
+        bedsAdapter.getFilter().filter(newText);
 
-                return false;
-            }
-        });
-        return super.onCreateOptionsMenu(menu);
-    }
+        return false;
+      }
+    });
+    return super.onCreateOptionsMenu(menu);
+  }
 
 }
